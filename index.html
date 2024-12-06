@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postal Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            padding: 10px;
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 10px;
+        }
+
+        #form h3 {
+            padding: 0;
+            margin: 0;
+        }
+
+        #form input {
+            border: 1px solid black;
+            outline: none;
+            border-radius: 3px;
+            /* height: 28px; */
+            width: 100%;
+            padding: 7px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+
+        }
+
+        #form input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        #form button {
+            padding: 5px;
+            width: 100px;
+            background: black;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #form button:hover {
+            background-color: #333;
+        }
+        #error {
+            font-size: small;
+            color: red;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #form button:active {
+            animation: pulse 0.3s infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="form">
+        <h3>Enter Pincode</h3>
+        <input id="input" type="text" placeholder="Pincode">
+        <p id="error" style="display: none;"></p>
+        <button id="button" type="submit">Lookup</button>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
